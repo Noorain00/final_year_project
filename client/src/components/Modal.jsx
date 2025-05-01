@@ -23,7 +23,7 @@ const Modal = () => {
               Ready to make gains, giggles, and good vibes?
               Let’s GO! 🚀
               {/* <a
-                href="https://github.com/anandcodework/Gym_Management_System_MERN.git"
+                href="https://github.com/Noorain00"
         
                 target="_blank"
                 rel="noopener noreferrer"
