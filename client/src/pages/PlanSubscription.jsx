@@ -6,7 +6,7 @@ import { Input, ButtonOutline, Loader } from '../components';
 import { useAuth } from '../context/auth';
 import { FiArrowUpRight } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-import { BASE_URL } from '../utils/fetchData';
+import { LOCAL_BASE_URL } from '../utils/fetchData';
 
 const PlanSelection = () => {
   const { planid } = useParams();
@@ -26,7 +26,7 @@ const PlanSelection = () => {
   const getPlan = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`${BASE_URL}/api/v1/plan/get-plan/${planid}`);
+      const res = await axios.get(`${LOCAL_BASE_URL}/api/v1/plan/get-plan/${planid}`);
       if (res.data && res.data.success) {
         setPlanName(res.data.plan.planName);
         setMonthlyPlanAmount(res.data.plan.monthlyPlanAmount);
@@ -105,7 +105,7 @@ const PlanSelection = () => {
 
   const completeSubscription = async () => {
     try {
-      const res = await axios.post(`${BASE_URL}/api/v1/subscription/create-subscription`, {
+      const res = await axios.post(`${LOCAL_BASE_URL}/api/v1/subscription/create-subscription`, {
         userName, planType, planAmount, planId
       }, {
         headers: {
@@ -133,7 +133,7 @@ const PlanSelection = () => {
   const initiateRazorpayPayment = async () => {
     // Razorpay API Integration code here
     try {
-      const paymentData = await axios.post(`${BASE_URL}/api/v1/payment/razorpay`, {
+      const paymentData = await axios.post(`${LOCAL_BASE_URL}/api/v1/payment/razorpay`, {
         amount: planAmount,
       });
 
@@ -151,7 +151,7 @@ const PlanSelection = () => {
         handler: async (response) => {
           // Handle successful payment and complete subscription
           try {
-            const res = await axios.post(`${BASE_URL}/api/v1/subscription/create-subscription`, {
+            const res = await axios.post(`${LOCAL_BASE_URL}/api/v1/subscription/create-subscription`, {
               userName, planType, planAmount, planId
             }, {
               headers: {

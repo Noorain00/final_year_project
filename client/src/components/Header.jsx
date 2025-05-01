@@ -18,9 +18,13 @@ const Header = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo (Stylized Text) */}
         <Link to="/" className="flex items-center space-x-2">
-          <span className="text-3xl sm:text-4xl font-extrabold text-yellow-400 tracking-widest">
-            Gym<span className="text-white">Master</span>
-          </span>
+        <span className="text-3xl sm:text-4xl font-extrabold text-yellow-400 tracking-widest">
+          Gym<span className="text-white">Nexus</span>
+        </span>
+        <br />
+        <span className="italic text-white text-sm sm:text-base">
+          The central hub for your fitness empire
+        </span>
         </Link>
 
         {/* Hamburger Menu for Mobile */}

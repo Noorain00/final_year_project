@@ -22,5 +22,5 @@ const fetchData = async (url, options) => {
 };
 
 const BASE_URL = "https://gym-management-system-mern.onrender.com"; 
-
-export { fetchData, exerciseOptions, youtubeExerciseOptions, BASE_URL };
+const LOCAL_BASE_URL = "http://localhost:5000"
+export { fetchData, exerciseOptions, youtubeExerciseOptions, BASE_URL, LOCAL_BASE_URL };

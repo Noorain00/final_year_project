@@ -11,7 +11,7 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-20 md:gap-0">
                     <div className='flex flex-col gap-5'>
                         <h3 className='text-white text-2xl font-semibold'>Mark Your Attendance</h3>
-                        <p className='text-gray-400 text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem dolorum officia neque unde, dolores perspiciatis omnis beatae vitae blanditiis id Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse nostrum fugit iste maxime non suscipit </p>
+                        <p className='text-gray-400 text-lg'>At GymNexus, we’re more than just a fitness platform — we’re your partner in building a stronger, healthier lifestyle. From expert-guided workouts to wellness tips and lifestyle inspiration, we bring everything you need under one roof to help you thrive on your fitness journey</p>
 
 
                         {/* <button type='button' className='font-bold border-2 outline-none px-6 py-3 text-white border-blue-500 hover:bg-blue-500 hover:text-gray-100 transition-all rounded-sm'>Explore More</button> */}

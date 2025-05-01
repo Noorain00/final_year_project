@@ -5,9 +5,11 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 
 const app = express();
-
+const corOption = {
+    origin:'http://localhost:5173'
+}
 // initialise downlaoded package
-app.use(cors());
+app.use(cors(corOption));
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
